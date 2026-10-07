@@ -19,6 +19,7 @@ export function InquiryForm() {
   const [notes, setNotes] = useState("");
   const [error, setError] = useState("");
   const [toast, setToast] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const ready = date.length > 0 && Number(guests) > 0 && items.length > 0;
   const message = useMemo(() => {
@@ -34,7 +35,7 @@ export function InquiryForm() {
       return;
     }
 
-    const timer = window.setTimeout(() => setToast(false), 5000);
+    const timer = window.setTimeout(() => setToast(false), 20000);
     return () => window.clearTimeout(timer);
   }, [toast]);
 
@@ -55,8 +56,15 @@ export function InquiryForm() {
 
     try {
       await navigator.clipboard.writeText(inquiry);
+      setCopied(true);
       setToast(true);
-      window.open(instagramDmUrl, "_blank", "noopener,noreferrer");
+      window.setTimeout(() => {
+        const link = document.createElement("a");
+        link.href = instagramDmUrl;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.click();
+      }, 2500);
     } catch {
       setError("The message could not be copied in this browser. Use the email button, or copy the note below.");
     }
@@ -126,6 +134,7 @@ export function InquiryForm() {
         />
       </label>
       {error ? <p className="form-error">{error}</p> : null}
+      {copied ? <p className="copied-note">{toastCopy}</p> : null}
       <p className="preview">{message}</p>
       <div className="form-actions">
         <button className="button" type="submit">
