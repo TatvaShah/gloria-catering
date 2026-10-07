@@ -46,9 +46,7 @@ export default function HomePage() {
               priority
               sizes="(min-width: 720px) 46vw, 100vw"
             />
-            <figcaption className="hero-note">
-              Fresh, elegant, and made with love. {business.followers} followers on Instagram.
-            </figcaption>
+            <figcaption className="hero-note">Fresh, elegant, and made with love.</figcaption>
           </figure>
         </section>
 
@@ -75,7 +73,7 @@ export default function HomePage() {
                   any celebration.
                 </p>
                 <p>
-                  <a href={offerings[0].href}>See this platter on Instagram</a>
+                  <a href={offerings[0].href}>See the platter</a>
                 </p>
               </div>
             </article>
@@ -94,7 +92,7 @@ export default function HomePage() {
                   presentation. Perfect for parties, gatherings, celebrations, and special moments.
                 </p>
                 <p>
-                  <a href={offerings[1].href}>See this board on Instagram</a>
+                  <a href={offerings[1].href}>See the board</a>
                 </p>
               </div>
             </article>
@@ -113,7 +111,7 @@ export default function HomePage() {
                   touch for a special event.
                 </p>
                 <p>
-                  <a href={offerings[2].href}>See this platter on Instagram</a>
+                  <a href={offerings[2].href}>See the fruit</a>
                 </p>
               </div>
             </article>
@@ -132,7 +130,7 @@ export default function HomePage() {
                   birthday filled with delicious bites and beautiful details.
                 </p>
                 <p>
-                  <a href={offerings[3].href}>See this table on Instagram</a>
+                  <a href={offerings[3].href}>See the sweet table</a>
                 </p>
               </div>
             </article>
@@ -171,9 +169,9 @@ export default function HomePage() {
               <div>
                 <h3>Corporate catering</h3>
                 <p>
-                  A recent table for Air Canada at Toronto Pearson Airport. Gloria also prepares
-                  gift boxes for employee appreciation, client gifts, office celebrations, and
-                  special occasions.
+                  A recent table for Air Canada at Toronto Pearson Airport. We also prepare gift
+                  boxes for employee appreciation, client gifts, office celebrations, and special
+                  occasions.
                 </p>
                 <p>
                   <a href="https://www.instagram.com/p/DduDoZTmDpz/">See the Pearson table</a>
@@ -186,7 +184,7 @@ export default function HomePage() {
         <section className="section wrap">
           <p className="pull">
             Fresh, elegant, and made with love.
-            <span>In their words, from Instagram.</span>
+            <span>Perfect for every celebration.</span>
           </p>
         </section>
 
@@ -206,7 +204,7 @@ export default function HomePage() {
                   />
                 </a>
                 <figcaption>
-                  {photo.caption}. <a href={photo.href}>Open the post</a>
+                  <a href={photo.href}>{photo.caption}</a>
                 </figcaption>
               </figure>
             ))}
@@ -215,10 +213,10 @@ export default function HomePage() {
 
         <section className="section wrap" id="reels">
           <p className="section-index">04</p>
-          <h2>Reels from the kitchen</h2>
+          <h2>Come a little closer</h2>
           <p className="lede">
-            These are Gloria’s own Instagram reels, saved here so they play on the page. Press
-            play. Sound from the original posts stays on Instagram.
+            Press play. Every table is thoughtfully prepared, beautifully styled, and made with
+            love.
           </p>
           <div className="reels">
             {reels.map((reel) => (
@@ -235,7 +233,7 @@ export default function HomePage() {
                   <source src={reel.src} type="video/mp4" />
                 </video>
                 <figcaption>
-                  {reel.caption} <a href={reel.href}>Watch on Instagram</a>
+                  {reel.caption} <a href={reel.href}>See the full clip</a>
                 </figcaption>
               </figure>
             ))}
@@ -248,16 +246,16 @@ export default function HomePage() {
               <p className="section-index">05</p>
               <h2>DM us to book your event.</h2>
               <p>
-                Gloria takes orders by Instagram message and by email at{" "}
+                We would love to hear from you. Message us, or email{" "}
                 <a href={`mailto:${emailAddress}`}>{emailAddress}</a>.
               </p>
               <p>
-                Build a note with the occasion, the date, the guest count, and the trays you want.
-                Copy it into a direct message, or send the same note by email.
+                Tell us the occasion, the date, how many guests, and what you would love on the
+                table. Copy the note into a message, or send it by email.
               </p>
               <p>
-                Their Instagram highlights are named Menu, Charcuterie, Finger foods, Fruit platter,
-                and Reviews. Open one there for the details they keep on the profile.
+                Whenever you want the menu, a board, finger foods, fruit, or reviews, they are
+                right here.
               </p>
               <ul className="highlights">
                 {highlights.map((highlight) => (
@@ -269,8 +267,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <p>
-                {business.followers} followers and {business.posts} posts on{" "}
-                <a href={instagramUrl}>{business.handle}</a>.
+                Find us at <a href={instagramUrl}>{business.handle}</a>.
               </p>
             </div>
             <div className="panel">

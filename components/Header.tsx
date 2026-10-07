@@ -5,7 +5,7 @@ const links = [
   ["Offerings", "#offerings"],
   ["Gatherings", "#gatherings"],
   ["Gallery", "#gallery"],
-  ["Reels", "#reels"],
+  ["Moments", "#reels"],
   ["Book", "#book"],
 ];
 
